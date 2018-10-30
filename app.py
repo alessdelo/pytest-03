@@ -16,6 +16,9 @@ if __name__ == '__main__':
     run(host='0.0.0.0', port=port)
 """"
 
+import os
+port = int(os.environ.get('PORT', 17995))
+
 a=1+1
 b=2+2
 a+b
