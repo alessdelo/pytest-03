@@ -8,9 +8,9 @@ print(dir(os))
 a=1+1
 b=2+2
 a+b
-print '''<html>
+print ('''<html>
 <head><title>My first Python CGI app</title></head>
 <body>
 <p>Hello, 'world'!</p>
 </body>
-</html>'''
+</html>''')
