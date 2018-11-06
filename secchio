@@ -23,3 +23,20 @@ import requests
 print(requests.get('/').mystring)
 
 # add_string = '<b>Hello Ok!</b>' 
+
+    
+a=1+1
+b=2+2
+
+    
+mystring = '''<html>
+<head><title>My first Python CGI app</title></head>
+<body>'''
+
+mystring += '<p>Bla, Bla, Bla.....</p>'
+
+# mystring += add_string
+
+mystring += '</body></html>'
+
+# print(requests.get('/').mystring)
