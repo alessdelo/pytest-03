@@ -6,7 +6,7 @@ from bottle import route, run
 
 @route('/hello/:name')
 def index(name='World'):
-    return '<b>Hello %s!</b>' % name
+    add_string '<b>Hello %s!</b>' % name
 
 
 if __name__ == '__main__':
@@ -27,6 +27,8 @@ mystring = '''<html>
 mystring += '<p>Bla, Bla, Bla.....</p>'
 
 mystring += a+b
+
+mystring += add_string
 
 mystring += '</body></html>'
 
