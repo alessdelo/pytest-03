@@ -21,8 +21,6 @@ mystring = '''<html>
 
 mystring += '<p>Bla, Bla, Bla.....</p>'
 
-mystring += a+b
-
 mystring += add_string
 
 mystring += '</body></html>'
