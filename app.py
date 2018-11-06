@@ -3,7 +3,7 @@ from bottle import route, run
 
 @route('/')
 
-add_string = '<b>Hello Ok!</b>' 
+# add_string = '<b>Hello Ok!</b>' 
 
 @route('/hello/:name')
 def index(name='World'):
@@ -22,7 +22,7 @@ mystring = '''<html>
 
 mystring += '<p>Bla, Bla, Bla.....</p>'
 
-mystring += add_string
+# mystring += add_string
 
 mystring += '</body></html>'
 
