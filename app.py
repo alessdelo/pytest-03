@@ -16,9 +16,18 @@ if __name__ == '__main__':
     # Run the app.
     run(host='0.0.0.0', port=port)
     
-print ('''<html>
+a=1+1
+b=2+2
+
+    
+mystring = '''<html>
 <head><title>My first Python CGI app</title></head>
-<body>
-<p>Hello, 'world'!</p>
-</body>
-</html>''')
+<body>'''
+
+mystring += '<p>Bla, Bla, Bla.....</p>'
+
+mystring += a+b
+
+mystring += '</body></html>'
+
+mystring
