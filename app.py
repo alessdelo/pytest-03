@@ -1,4 +1,4 @@
-import os
+import os, requests
 from bottle import route, run
 
 @route('/')
@@ -26,7 +26,7 @@ mystring += '<p>Bla, Bla, Bla.....</p>'
 
 mystring += '</body></html>'
 
-mystring
+print(requests.get('/').mystring)
 
 if __name__ == '__main__':
     # Get required port, default to 5000.
