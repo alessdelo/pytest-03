@@ -21,3 +21,5 @@ if __name__ == '__main__':
 
 import requests
 print(requests.get('/').mystring)
+
+# add_string = '<b>Hello Ok!</b>' 
