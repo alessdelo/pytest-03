@@ -3,6 +3,7 @@ from bottle import route, run
 
 @route('/')
 
+add_string = '<b>Hello Ok!</b>' 
 
 @route('/hello/:name')
 def index(name='World'):
