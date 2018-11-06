@@ -7,7 +7,7 @@ from bottle import route, run
 
 @route('/hello/:name')
 def index(name='World'):
-    add_string = '<b>Hello %s!</b>' % name
+    return '<b>Hello %s!</b>' % name
 
 
 
@@ -26,7 +26,7 @@ mystring += '<p>Bla, Bla, Bla.....</p>'
 
 mystring += '</body></html>'
 
-print(requests.get('/').mystring)
+# print(requests.get('/').mystring)
 
 if __name__ == '__main__':
     # Get required port, default to 5000.
