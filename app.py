@@ -15,3 +15,10 @@ if __name__ == '__main__':
 
     # Run the app.
     run(host='0.0.0.0', port=port)
+    
+print ('''<html>
+<head><title>My first Python CGI app</title></head>
+<body>
+<p>Hello, 'world'!</p>
+</body>
+</html>''')
