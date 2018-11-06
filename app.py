@@ -9,12 +9,7 @@ def index(name='World'):
     add_string '<b>Hello %s!</b>' % name
 
 
-if __name__ == '__main__':
-    # Get required port, default to 5000.
-    port = os.environ.get('PORT', 5000)
 
-    # Run the app.
-    run(host='0.0.0.0', port=port)
     
 a=1+1
 b=2+2
@@ -33,3 +28,10 @@ mystring += add_string
 mystring += '</body></html>'
 
 mystring
+
+if __name__ == '__main__':
+    # Get required port, default to 5000.
+    port = os.environ.get('PORT', 5000)
+
+    # Run the app.
+    run(host='0.0.0.0', port=port)
