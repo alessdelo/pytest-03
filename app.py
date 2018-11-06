@@ -1,5 +1,6 @@
 import os
 port = os.environ.get('PORT', 5000)
+# Run the app.
 from bottle import route, run
 run(host='0.0.0.0', port=port)
 # port = int(os.environ.get('PORT', 17995))
@@ -13,4 +14,3 @@ print ('''<html>
 <p>Hello, 'world'!</p>
 </body>
 </html>''')
-# Run the app.
