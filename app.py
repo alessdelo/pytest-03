@@ -24,17 +24,6 @@ def page1(greet='mikey'):
     mystring += '</body></html>'    
     return mystring
 
-@app.route('/page2/:greet','boh')
-def page1(greet='mikey',boh='boh'):
-    mystring = '''<html>
-    <head><title>Page 1</title></head>
-    <body>'''
-    mystring += '<p>Bla, Bla, Bla.....</p>'
-    mystring +=  '<b>Ciao %s!</b>' % greet
-    mystring +=  '<b>Boh %s!</b>' % boh
-    mystring += '</body></html>'    
-    return mystring
-
 if __name__ == '__main__':
     # Get required port, default to 5000.
     port = os.environ.get('PORT', 5000)
