@@ -20,7 +20,7 @@ def index():
     return mystring
 
 @app.route('/hello/:name')
-def index(name='World'):
+def hello(name='World'):
     return '<b>Hello %s!</b>' % name
     
 @app.route('/page1/:greet')
