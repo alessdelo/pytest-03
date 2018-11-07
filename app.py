@@ -1,9 +1,12 @@
 import os
-from bottle import route, run
+# from bottle import route, run
 
-@route('/')
+from flask import Flask
+app = Flask(__name__)
 
-@route('/hello/:name')
+@app.route('/')
+
+@app.route('/hello/:name')
 def index(name='World'):
     return '<b>Hello %s!</b>' % name
 
@@ -11,7 +14,7 @@ def index(name='World'):
 # def page1(greet='mikey',boh='boh'):
 # mystring +=  '<b>Boh %s!</b>' % boh    
     
-@route('/page1/:greet')
+@app.route('/page1/:greet')
 def page1(greet='mikey'):
     mystring = '''<html>
     <head><title>Page 1</title></head>
@@ -21,7 +24,7 @@ def page1(greet='mikey'):
     mystring += '</body></html>'    
     return mystring
 
-@route('/page2/:greet','boh')
+@app.route('/page2/:greet','boh')
 def page1(greet='mikey',boh='boh'):
     mystring = '''<html>
     <head><title>Page 1</title></head>
@@ -37,4 +40,4 @@ if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
 
     # Run the app.
-    run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port)
