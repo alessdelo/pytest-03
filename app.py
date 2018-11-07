@@ -4,24 +4,31 @@ import os
 from flask import Flask
 app = Flask(__name__)
 
+head = '''<html>
+<head><title>Page 1</title></head>
+<body>'''
+
+foot = '</body></html>'
+
+
 @app.route('/')
+def index():
+    mystring = head
+    mystring += '<h1>Main Page</h1>'
+    mystring +=  '<p>This is the main page...</p>'
+    mystring += foot    
+    return mystring
 
 @app.route('/hello/:name')
 def index(name='World'):
     return '<b>Hello %s!</b>' % name
-
-# @route('/page1/:greet','boh')
-# def page1(greet='mikey',boh='boh'):
-# mystring +=  '<b>Boh %s!</b>' % boh    
     
 @app.route('/page1/:greet')
 def page1(greet='mikey'):
-    mystring = '''<html>
-    <head><title>Page 1</title></head>
-    <body>'''
+    mystring = head
     mystring += '<p>Bla, Bla, Bla.....</p>'
     mystring +=  '<b>Ciao %s!</b>' % greet
-    mystring += '</body></html>'    
+    mystring += foot    
     return mystring
 
 if __name__ == '__main__':
