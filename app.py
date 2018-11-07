@@ -11,7 +11,17 @@ def index(name='World'):
 # def page1(greet='mikey',boh='boh'):
 # mystring +=  '<b>Boh %s!</b>' % boh    
     
-@route('/page1/:greet','boh')
+@route('/page1/:greet')
+def page1(greet='mikey'):
+    mystring = '''<html>
+    <head><title>Page 1</title></head>
+    <body>'''
+    mystring += '<p>Bla, Bla, Bla.....</p>'
+    mystring +=  '<b>Ciao %s!</b>' % greet
+    mystring += '</body></html>'    
+    return mystring
+
+@route('/page2/:greet','boh')
 def page1(greet='mikey',boh='boh'):
     mystring = '''<html>
     <head><title>Page 1</title></head>
