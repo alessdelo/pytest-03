@@ -7,6 +7,10 @@ from bottle import route, run
 def index(name='World'):
     return '<b>Hello %s!</b>' % name
 
+# @route('/page1/:greet','boh')
+# def page1(greet='mikey',boh='boh'):
+# mystring +=  '<b>Boh %s!</b>' % boh    
+    
 @route('/page1/:greet','boh')
 def page1(greet='mikey',boh='boh'):
     mystring = '''<html>
