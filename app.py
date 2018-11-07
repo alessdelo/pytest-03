@@ -7,13 +7,14 @@ from bottle import route, run
 def index(name='World'):
     return '<b>Hello %s!</b>' % name
 
-@route('/page1/:greet')
-def page1(greet='mikey'):
+@route('/page1/:greet'/:'boh')
+def page1(greet='mikey',boh='boh'):
     mystring = '''<html>
     <head><title>Page 1</title></head>
     <body>'''
     mystring += '<p>Bla, Bla, Bla.....</p>'
     mystring +=  '<b>Ciao %s!</b>' % greet
+    mystring +=  '<b>Boh %s!</b>' % boh
     mystring += '</body></html>'    
     return mystring
 
