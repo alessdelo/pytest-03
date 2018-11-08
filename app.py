@@ -19,6 +19,8 @@ def index():
     mystring += foot    
     return mystring
 
+# ------------------------------------
+
 # PASS VALUES FROM QUERY STRING (request module)
 # from:   https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
 # for testing:  https://firstpytest.herokuapp.com/query-example?language=Python&framework=Flask&website=Scotch
@@ -32,9 +34,27 @@ def query_example():
               <h1>The framework value is: {}</h1>
               <h1>The website value is: {}'''.format(language, framework, website)
 
-@app.route('/form-example')
+# ------------------------------------
+
+# PASS VALUES FROM A FORM (request module)
+# from:   https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
+# for testing:  https://firstpytest.herokuapp.com//form-example
+@app.route('/form-example', methods=['GET', 'POST']) #allow both GET and POST requests
 def form_example():
-    return 'Todo...'
+    if request.method == 'POST':  #this block is only entered when the form is submitted
+        language = request.form.get('language')
+        framework = request.form['framework']
+
+        return '''<h1>The language value is: {}</h1>
+                  <h1>The framework value is: {}</h1>'''.format(language, framework)
+
+    return '''<form method="POST">
+                  Language: <input type="text" name="language"><br>
+                  Framework: <input type="text" name="framework"><br>
+                  <input type="submit" value="Submit"><br>
+              </form>'''
+
+# ------------------------------------
 
 @app.route('/json-example')
 def json_example():
