@@ -39,7 +39,7 @@ def query_example():
 
 # PASS VALUES FROM A FORM (request module)
 # from:   https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
-# for testing:  https://firstpytest.herokuapp.com//form-example
+# for testing:  https://firstpytest.herokuapp.com/form-example
 @app.route('/form-example', methods=['GET', 'POST']) #allow both GET and POST requests
 def form_example():
     if request.method == 'POST':  #this block is only entered when the form is submitted
