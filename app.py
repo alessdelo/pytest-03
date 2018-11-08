@@ -19,9 +19,18 @@ def index():
     mystring += foot    
     return mystring
 
+# PASS VALUES FROM QUERY STRING (request module)
+# from:   https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
+# for testing:  https://firstpytest.herokuapp.com/query-example?language=Python&framework=Flask&website=Scotch
 @app.route('/query-example')
 def query_example():
-    return 'Todo...'
+    language = request.args.get('language') #if key doesn't exist, returns None
+    framework = request.args['framework'] #if key doesn't exist, returns a 400, bad request error
+    website = request.args.get('website')
+
+    return '''<h1>The language value is: {}</h1>
+              <h1>The framework value is: {}</h1>
+              <h1>The website value is: {}'''.format(language, framework, website)
 
 @app.route('/form-example')
 def form_example():
