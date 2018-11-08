@@ -19,17 +19,17 @@ def index():
     mystring += foot    
     return mystring
 
-@app.route('/hello/:name')
-def hello(name='World'):
-    return '<b>Hello %s!</b>' % name
-    
-@app.route('/page1/:greet')
-def page1(greet='mikey'):
-    mystring = head
-    mystring += '<p>Bla, Bla, Bla.....</p>'
-    mystring +=  '<b>Ciao %s!</b>' % greet
-    mystring += foot    
-    return mystring
+@app.route('/query-example')
+def query_example():
+    return 'Todo...'
+
+@app.route('/form-example')
+def form_example():
+    return 'Todo...'
+
+@app.route('/json-example')
+def json_example():
+    return 'Todo...'
 
 if __name__ == '__main__':
     # Get required port, default to 5000.
