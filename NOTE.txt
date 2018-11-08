@@ -1,0 +1,3 @@
+PASSARE VARIABILI DA QUERY STRING IN FLASK
+
+    https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
