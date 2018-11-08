@@ -1,7 +1,8 @@
 import os
-# from bottle import route, run
 
 from flask import Flask, request
+
+# creates an instance of Flask class
 app = Flask(__name__)
 
 head = '''<html>
@@ -59,6 +60,9 @@ def form_example():
 @app.route('/json-example')
 def json_example():
     return 'Todo...'
+
+
+# ------------------------------------
 
 if __name__ == '__main__':
     # Get required port, default to 5000.
