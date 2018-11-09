@@ -2,7 +2,7 @@
 
 import os
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 # creates an instance of Flask class
 app = Flask(__name__)
