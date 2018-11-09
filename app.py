@@ -31,6 +31,12 @@ def index():
 
 # ------------------------------------
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+# ------------------------------------
+
 # PASS VALUES FROM QUERY STRING (request module)
 # from:   https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
 # for testing:  https://firstpytest.herokuapp.com/query-example?language=Python&framework=Flask&website=Scotch
