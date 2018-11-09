@@ -1,5 +1,5 @@
 # firstpytest
-hello world phyton-heroku via github
+This is a very basic test of Python implementation on Heroku platform,
+it uses Flask module to show html pages.
 
-# app01.py
-very basic test in heroku with a first test of.... 
+
