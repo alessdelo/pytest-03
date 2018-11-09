@@ -17,10 +17,6 @@ foot = '</body></html>'
 @app.route('/')
 @app.route('/home')
 def index():
-    mystring = head
-    mystring += '<h1>Main Page</h1>'
-    mystring +=  '<p>This is the main page...</p>'
-    mystring += foot    
     return render_template('home.html')
 
 # ------------------------------------
