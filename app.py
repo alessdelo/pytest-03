@@ -7,11 +7,20 @@ from flask import Flask, request, render_template
 # creates an instance of Flask class
 app = Flask(__name__)
 
-head = '''<html>
-<head><title>Page 1</title></head>
-<body>'''
-
-foot = '</body></html>'
+posts = [
+    {
+        'author': 'Corey Schafer',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'April 20, 2018'
+    },
+    {
+        'author': 'Jane Doe',
+        'title': 'Blog Post 2',
+        'content': 'Second post content',
+        'date_posted': 'April 21, 2018'
+    }
+]
 
 
 @app.route('/')
