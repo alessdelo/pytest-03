@@ -21,7 +21,7 @@ def index():
     mystring += '<h1>Main Page</h1>'
     mystring +=  '<p>This is the main page...</p>'
     mystring += foot    
-    return mystring
+    return render_template('home.html')
 
 # ------------------------------------
 
