@@ -15,6 +15,7 @@ foot = '</body></html>'
 
 
 @app.route('/')
+@app.route('/home')
 def index():
     mystring = head
     mystring += '<h1>Main Page</h1>'
