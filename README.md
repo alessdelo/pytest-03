@@ -1,5 +1,7 @@
-# firstpytest
-This is a very basic test of Python implementation on Heroku platform,
-it uses Flask module to show html pages.
+# pytest-02
+Flask implementation in Pithon
+- use of templates
+- templates inheritance
+.
 
 
