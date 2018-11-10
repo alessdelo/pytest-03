@@ -1,6 +1,6 @@
 # pytest-02
 Flask implementation in Pithon
-- use of templates
+- use of 'render_template' function
 - templates inheritance
 .
 
