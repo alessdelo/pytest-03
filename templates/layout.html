@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% if title %}
+      <title>pytest-02 - {{ title }}</title>
+  {% else %}
+      <title>pytest-02</title>
+  {% endif %}
+
+  
+  <meta name="description" content="second python test">
+  <meta name="author" content="bla bla">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <h1>Home Page</h1>
+  {% for post in posts %}
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.author }} - {{ post.date_posted }}</p>
+      <p>{{ post.content }}</p>
+  
+  {% endfor %}
+</body>
+</html>
