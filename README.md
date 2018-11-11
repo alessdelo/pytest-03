@@ -10,6 +10,7 @@
 - creation of dynamic layout
 - implementation of Bootstrap
 - creation of /static folder for css and javascript
+  - 'url_for' function
 
 .
 
