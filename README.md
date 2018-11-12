@@ -3,6 +3,9 @@
 
 - add flask-wtf module in requirements.txt file
 - creation of form.py file
-  - from flask_wtf import FlaskForm
+  -import FlaskForm class from flask_wtf:
+      - from flask_wtf import FlaskForm
+  - create an instance of FlaskForm class:
+      - class *MyForm*(FaskForm) 
 
 
