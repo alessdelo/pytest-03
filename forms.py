@@ -2,8 +2,8 @@
 from flask_wtf import FlaskForm
 # imports classes of various fields 
 from wtforms import StringField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, Length
 
 class RegistrationForm(FaskForm):
-    username = StringField('Username', validators=[DataRequired()])
+    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
   
