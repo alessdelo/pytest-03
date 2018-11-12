@@ -7,6 +7,8 @@ from flask import Flask, request, render_template, url_for
 # creates an instance of Flask class
 app = Flask(__name__)
 
+app.config('SECRET_KEY') = ''
+
 # some dummy data...
 posts = [
     {
