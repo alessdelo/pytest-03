@@ -1,5 +1,6 @@
 # pytest-03
 # Python/Flask_WTF form validation
+from: https://youtu.be/UIJKdCIEXUQ
 
 - add flask-wtf module in requirements.txt file
 - creation of form.py file
@@ -9,5 +10,6 @@
       - class *MyForm*(FaskForm)
   - creates instances from field classes
   - uses FlaskForm validators for fields
+- generate random numbrers with Python (min 11:00)
 
 
