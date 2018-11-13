@@ -42,6 +42,20 @@ def about():
 
 # ------------------------------------
 
+@app.route('/register')
+def register():
+    form = RegistrationForm()
+    return render_template('register.html', title='Register', form=form)
+
+# ------------------------------------
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Login', form=form)
+
+# ------------------------------------
+
 # PASS VALUES FROM QUERY STRING (request module)
 # from:   https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
 # for testing:  https://firstpytest.herokuapp.com/query-example?language=Python&framework=Flask&website=Scotch
