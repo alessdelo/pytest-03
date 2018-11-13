@@ -3,6 +3,7 @@
 import os
 
 from flask import Flask, request, render_template, url_for
+from forms import RegistrationForm, LoginForm
 
 # creates an instance of Flask class
 app = Flask(__name__)
