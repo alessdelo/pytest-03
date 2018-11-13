@@ -3,4 +3,3 @@ django
 gunicorn
 django-heroku
 flask
-flask-wtf
