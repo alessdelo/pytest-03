@@ -10,6 +10,6 @@ from: https://youtu.be/UIJKdCIEXUQ
       - class *MyForm*(FaskForm)
   - creates instances from field classes
   - uses FlaskForm validators for fields
-- generate random numbrers with Python (min 11:00)
+- generate random numbrers with Python 'secrets' module (min 11:00)
 
 
