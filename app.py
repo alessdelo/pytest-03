@@ -8,7 +8,8 @@ from forms import RegistrationForm, LoginForm
 # creates an instance of Flask class
 app = Flask(__name__)
 
-app.config('SECRET_KEY') = '5791628bb0b13ce0c676dfde280ba245'
+#on heroku config vars are setted in settings/config vars
+# app.config('SECRET_KEY') = '5791628bb0b13ce0c676dfde280ba245'
 
 # some dummy data...
 posts = [
