@@ -1,3 +1,5 @@
+problema con la costante SECRET_KEY
+
 https://github.com/heroku-python/bottle-helloworld
 
 https://www.youtube.com/watch?v=3820bRtbm9s
