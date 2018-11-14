@@ -5,6 +5,10 @@
             {{ form.hidden_tag() }}
             <fieldset class="form_group">
                 <legend class="border-bottom mb-4">Join Today</legend>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+                    {{ form.username(class="form-control form-control-lg") }}
+                </div>
                     
                 
             </fieldset>
