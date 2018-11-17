@@ -1,6 +1,2 @@
-bottle==0.10.2
-django
-gunicorn
-django-heroku
 flask
 flask-wtf
