@@ -53,7 +53,7 @@ def register():
 @app.route('/login')
 def login():
     form = LoginForm()
-    return render_template('login.html', title='Login', form=form)
+    return render_template('login.html', title='Login')
 
 # ------------------------------------
 
