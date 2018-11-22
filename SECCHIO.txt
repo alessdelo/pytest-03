@@ -1,5 +1,6 @@
 https://flask-wtf.readthedocs.io/en/stable/csrf.html
 https://flask-wtf.readthedocs.io/en/stable/quickstart.html
+https://stackoverflow.com/questions/47949022/git-heroku-how-to-hide-my-secret-key
 
 ---------------------------------------------
 
