@@ -1,3 +1,7 @@
+https://flask-wtf.readthedocs.io/en/stable/csrf.html
+
+---------------------------------------------
+
 {% extends "layout.html" %}
 {% block content %}
     <div class="content-section">
