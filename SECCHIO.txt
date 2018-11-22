@@ -1,4 +1,5 @@
 https://flask-wtf.readthedocs.io/en/stable/csrf.html
+https://flask-wtf.readthedocs.io/en/stable/quickstart.html
 
 ---------------------------------------------
 
