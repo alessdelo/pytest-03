@@ -69,3 +69,93 @@ print ('''<html>
 </body>
 </html>''')
 
+--------------------------------------------
+
+
+------------------------------------------------
+# imports FlaskForm class that automatically generates an html form
+from flask_wtf import FlaskForm
+# imports classes of various fields 
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Length, Email, EqualTo
+
+class RegistrationForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Sign Up')
+    
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember = BooleanField('Remember Me')
+    submit = SubmitField('Login')
+
+------------------------------------------------
+
+# setup.py
+
+setup(
+    name='mymodule',
+    version='0.1.0',
+    install_requires=[],  # Don't put anything here, just use requirements.txt
+    packages=['mymodule'],
+    package_dir={'mymodule': 'src/mymodule'},
+)
+------------------------------------------------
+"""
+import os
+from bottle import route, run
+
+@route('/hello/:name')
+def index(name='World'):
+    return '<b>Hello %s!</b>' % name
+
+
+if __name__ == '__main__':
+    # Get required port, default to 5000.
+    port = os.environ.get('PORT', 5000)
+
+    # Run the app.
+    run(host='0.0.0.0', port=port)
+""""
+
+
+
+import requests
+print(requests.get('/').mystring)
+
+# add_string = '<b>Hello Ok!</b>' 
+
+    
+a=1+1
+b=2+2
+
+    
+mystring = '''<html>
+<head><title>My first Python CGI app</title></head>
+<body>'''
+
+mystring += '<p>Bla, Bla, Bla.....</p>'
+
+# mystring += add_string
+
+mystring += '</body></html>'
+
+# print(requests.get('/').mystring)
+
+---------------------------
+
+@app.route('/page2/:greet','boh')
+def page1(greet='mikey',boh='boh'):
+    mystring = '''<html>
+    <head><title>Page 1</title></head>
+    <body>'''
+    mystring += '<p>Bla, Bla, Bla.....</p>'
+    mystring +=  '<b>Ciao %s!</b>' % greet
+    mystring +=  '<b>Boh %s!</b>' % boh
+    mystring += '</body></html>'    
+    return mystring
+    
+---------------------------
