@@ -1,8 +1,10 @@
+https://github.com/MirelaI/flask_heroku_example
+https://stackoverflow.com/questions/35657821/the-session-is-unavailable-because-no-secret-key-was-set-set-the-secret-key-on
 https://hack4impact.github.io/flask-base/deploy/
 https://flask-wtf.readthedocs.io/en/stable/csrf.html
 https://flask-wtf.readthedocs.io/en/stable/quickstart.html
 https://stackoverflow.com/questions/47949022/git-heroku-how-to-hide-my-secret-key
-https://stackoverflow.com/questions/35657821/the-session-is-unavailable-because-no-secret-key-was-set-set-the-secret-key-on
+
 
 ---------------------------------------------
 
