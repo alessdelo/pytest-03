@@ -8,7 +8,9 @@ from forms import RegistrationForm, LoginForm
 # creates an instance of Flask class
 app = Flask(__name__)
 
-secret_key = os.environ.get('SECRET_KEY', None)
+secret_key = None
+
+# secret_key = os.environ.get('SECRET_KEY', None)
 
 # on heroku config vars are setted in settings/config vars
 # see https://devcenter.heroku.com/articles/config-vars#local-setup
@@ -49,7 +51,7 @@ def about():
 @app.route('/register')
 def register():
     form = RegistrationForm()
-    return render_template('register.html', title='Register', form=form)
+    return render_template('register.html', title='Register', form=form, value=secret_key)
 
 # ------------------------------------
 
