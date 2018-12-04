@@ -52,7 +52,8 @@ def about():
 @app.route('/register')
 def register():
     form = RegistrationForm()
-    return render_template('register.html', title='Register', form=form, value=secret_key)
+    return render_template('register.html', title='Register', form=form)
+
 
 # ------------------------------------
 
