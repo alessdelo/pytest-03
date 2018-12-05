@@ -15,9 +15,9 @@ app = Flask(__name__)
 # on heroku config vars are setted in settings/config vars
 # see https://devcenter.heroku.com/articles/config-vars#local-setup
 # app.config('SECRET_KEY') = '5791628bb0b13ce0c676dfde280ba245'
-# secret_key = os.environ.get('SECRET_KEY')
+ secret_key = os.environ.get('SECRET_KEY')
 # app.config('SECRET_KEY') = os.environ.get('SECRET_KEY')
-os.environ.get('SECRET_KEY')
+# os.environ.get('SECRET_KEY')
 
 # some dummy data...
 posts = [
