@@ -4,7 +4,7 @@ import os
 
 from flask import Flask, request, render_template, url_for
 from forms import RegistrationForm, LoginForm
-from flask_wtf.csrf import CsrfProtect
+from flask_wtf.csrf import CSRFProtect
 
 csrf = CSRFProtect()
 # creates an instance of Flask class
