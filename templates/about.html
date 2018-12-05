@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
 {% block content%}
-{% secret_key = os.environ.get('SECRET_KEY') %}
+
     <p>This is the enviroment Secret Key.... {{ SECRET_KEY }} </p>
     <p>This is a text.... {{ "SECRET_KEY" }} </p>
     <p>... and this is a number: 2 + 2 = {{ 2+2 }} </p>
-    <p>This is the enviroment Secret Key passed.... {{ secret_key }} </p>
+    <p>This is the enviroment Secret Key passed.... {{ "ggg" }} </p>
 
 {% endblock content%}
 
