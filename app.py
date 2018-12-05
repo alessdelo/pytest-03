@@ -4,10 +4,11 @@ import os
 
 from flask import Flask, request, render_template, url_for
 from forms import RegistrationForm, LoginForm
+from flask_wtf.csrf import CsrfProtect
 
 # creates an instance of Flask class
 app = Flask(__name__)
-
+csrf.init_app(app)
 # secret_key = None
 
 # secret_key = os.environ.get('SECRET_KEY', None)
