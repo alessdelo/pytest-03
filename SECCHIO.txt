@@ -8,6 +8,10 @@ https://stackoverflow.com/questions/47949022/git-heroku-how-to-hide-my-secret-ke
 
 ---------------------------------------------
 
+KeyError: 'A secret key is required to use CSRF.'
+
+---------------------------------------------
+
 {% extends "layout.html" %}
 {% block content %}
     <div class="content-section">
