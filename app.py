@@ -52,7 +52,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About')
+    return render_template('about.html', title='About' the_keys=[secret_key, csrf_secret_key]))
 
 # ------------------------------------
 
