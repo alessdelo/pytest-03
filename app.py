@@ -46,13 +46,13 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('home.html', posts=posts, the_keys=[secret_key, csrf_secret_key])
+    return render_template('home.html', posts=posts)
 
 # ------------------------------------
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About' the_keys=[secret_key, csrf_secret_key])
+    return render_template('about.html', title='About', the_keys=[secret_key, csrf_secret_key])
 
 # ------------------------------------
 
