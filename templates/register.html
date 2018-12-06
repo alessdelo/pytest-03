@@ -1,8 +1,7 @@
 {% extends 'layout.html' %}
 {% block content%}
   <form method="POST" action="">
-
-            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
             <fieldset class="form_group">
                 <legend class="border-bottom mb-4">Join Today</legend>
                 <div class="form-group">
