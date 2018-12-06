@@ -6,23 +6,12 @@ from flask import Flask, request, render_template, url_for
 from forms import RegistrationForm, LoginForm
 from flask_wtf.csrf import CSRFProtect
 
-# csrf = CSRFProtect()
 # creates an instance of Flask class
 app = Flask(__name__)
 CSRFProtect(app)
-# secret_key = None
 
-# secret_key = os.environ.get('SECRET_KEY', None)
-
-# on heroku config vars are setted in settings/config vars
-# see https://devcenter.heroku.com/articles/config-vars#local-setup
-# app.config('SECRET_KEY') = '5791628bb0b13ce0c676dfde280ba245'
 secret_key = os.environ.get('SECRET_KEY')
 csrf_secret_key = os.environ.get('WTF_CSRF_SECRET_KEY')
-# app.config('SECRET_KEY') = os.environ.get('SECRET_KEY')
-# os.environ.get('SECRET_KEY')
-
-
         
 # some dummy data...
 posts = [
