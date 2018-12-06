@@ -6,10 +6,10 @@ from flask import Flask, request, render_template, url_for
 from forms import RegistrationForm, LoginForm
 from flask_wtf.csrf import CSRFProtect
 
-csrf = CSRFProtect()
+# csrf = CSRFProtect()
 # creates an instance of Flask class
 app = Flask(__name__)
-csrf.init_app(app)
+CSRFProtect(app)
 # secret_key = None
 
 # secret_key = os.environ.get('SECRET_KEY', None)
