@@ -22,6 +22,8 @@ csrf_secret_key = os.environ.get('WTF_CSRF_SECRET_KEY')
 # app.config('SECRET_KEY') = os.environ.get('SECRET_KEY')
 # os.environ.get('SECRET_KEY')
 
+
+        
 # some dummy data...
 posts = [
     {
@@ -44,7 +46,7 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('home.html', posts=posts, the_key=secret_key)
+    return render_template('home.html', posts=posts, the_keys=[secret_key, csrf_secret_key])
 
 # ------------------------------------
 
