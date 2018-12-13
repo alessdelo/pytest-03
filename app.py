@@ -5,15 +5,14 @@ import os
 from flask import Flask, request, render_template, url_for
 from forms import RegistrationForm, LoginForm
 from flask_wtf.csrf import CSRFProtect
-from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['SECRET_KEY'], os.environ['WTF_CSRF_SECRET_KEY'])
+
 
 # creates an instance of Flask class
 app = Flask(__name__)
 CSRFProtect(app)
 
-# secret_key = os.environ.get('SECRET_KEY')
-# csrf_secret_key = os.environ.get('WTF_CSRF_SECRET_KEY')
+secret_key = os.environ.get('SECRET_KEY')
+csrf_secret_key = os.environ.get('WTF_CSRF_SECRET_KEY')
         
 # some dummy data...
 posts = [
@@ -43,7 +42,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About', secret_key = (s3[0], s3[1])
+    return render_template('about.html', title='About', he_keys=[secret_key, csrf_secret_key])
 
 # ------------------------------------
 
