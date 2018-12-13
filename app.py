@@ -45,7 +45,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About', the_keys=[secret_key, csrf_secret_key])
+    return render_template('about.html', title='About', the_keys=[secret_key, csrf_secret_key], SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY'] )
 
 # ------------------------------------
 
