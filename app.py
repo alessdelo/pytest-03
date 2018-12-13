@@ -14,8 +14,8 @@ CSRFProtect(app)
 secret_key = os.environ.get('SECRET_KEY')
 csrf_secret_key = os.environ.get('WTF_CSRF_SECRET_KEY')
 
-SECRET_KEY = os.environ['SECRET_KEY']
-WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
+# WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY']
         
 # some dummy data...
 posts = [
@@ -52,7 +52,7 @@ def about():
 @app.route('/register', methods=['GET' , 'POST'])
 def register():
     form = RegistrationForm()
-    return render_template('register.html', title='Register', form=form, SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY')
+    return render_template('register.html', title='Register', form=form, SECRET_KEY = os.environ['SECRET_KEY'])
 
 
 # ------------------------------------
