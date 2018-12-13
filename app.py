@@ -49,7 +49,7 @@ def about():
 
 # ------------------------------------
 
-@app.route('/register', methods=['GET' , 'POST'])
+@app.route('/register', methods=['GET' , 'POST'], SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY')
 def register():
     form = RegistrationForm()
     return render_template('register.html', title='Register', form=form)
