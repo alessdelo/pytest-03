@@ -10,8 +10,8 @@ from flask_wtf.csrf import CSRFProtect
 app = Flask(__name__)
 CSRFProtect(app)
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-WTF_CSRF_SECRET_KEY = os.environ.get('WTF_CSRF_SECRET_KEY')
+secret_key = os.environ.get('SECRET_KEY')
+csrf_secret_key = os.environ.get('WTF_CSRF_SECRET_KEY')
 
 # SECRET_KEY = os.environ['SECRET_KEY']
 # WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY']
