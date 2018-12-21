@@ -6,14 +6,63 @@ from flask import Flask, request, render_template, url_for
 from forms import RegistrationForm, LoginForm
 from flask_wtf.csrf import CSRFProtect
 
+# creates an instance of Flask class
+app = Flask(__name__)
+CSRFProtect(app)
 
-# 
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# WTF_CSRF_SECRET_KEY = os.environ.get('WTF_CSRF_SECRET_KEY')
+
+# SECRET_KEY = os.environ['SECRET_KEY']
+# WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY']
+        
+# some dummy data...
+posts = [
+    {
+        'author': 'Corey Schafer',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'April 20, 2018'
+    },
+    {
+        'author': 'Jane Doe',
+        'title': 'Blog Post 2',
+        'content': 'Second post content',
+        'date_posted': 'April 21, 2018'
+    }
+]
+
+
+# ------------------------------------
+
+@app.route('/')
+@app.route('/home')
+def index():
+    return render_template('home.html', posts=posts)
+
+# ------------------------------------
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About', the_keys=[secret_key, csrf_secret_key], SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY'] )
+
 # ------------------------------------
 
 @app.route('/register', methods=['GET' , 'POST'])
 def register():
     form = RegistrationForm()
     return render_template('register.html', title='Register', form=form, SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY'] )
+
+
+# ------------------------------------
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Login', form=form)
+
+# ------------------------------------
+
 
 
 
