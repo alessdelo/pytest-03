@@ -16,6 +16,8 @@ WTF_CSRF_SECRET_KEY = os.environ.get('WTF_CSRF_SECRET_KEY')
 
 # SECRET_KEY = os.environ['SECRET_KEY']
 # WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY']
+
+# the_keys=[secret_key, csrf_secret_key], 
         
 # some dummy data...
 posts = [
@@ -45,7 +47,7 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='About', the_keys=[secret_key, csrf_secret_key], SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY'] )
+    return render_template('about.html', title='About', SECRET_KEY = os.environ['SECRET_KEY'], WTF_CSRF_SECRET_KEY = os.environ['WTF_CSRF_SECRET_KEY'] )
 
 # ------------------------------------
 
